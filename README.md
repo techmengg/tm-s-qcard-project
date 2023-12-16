@@ -1,6 +1,6 @@
 # tm's - Personal portfolio
 
-tm's Personal Portfolio is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+tm's Personal Portfolio.
 
 ## Demo
 
