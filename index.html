@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>tm's Personal Portfolio</title>
 
   <!--
     - favicon
@@ -24,6 +24,71 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
+    <!-- -------------------------------------- -->
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Light and Dark Mode Toggle</title>
+      <style>
+          body {
+              background-color: #000000; /* Default background color (black) */
+              color: #fff; /* Default text color (white) */
+              transition: background-color 0.5s, color 0.5s;
+              font-family: 'Arial', sans-serif;
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+          }
+  
+          body.dark-mode {
+              background-color: #DEE4E7; /* Dark mode background color */
+              color: #333; /* Dark mode text color */
+          }
+  
+          #toggle-btn {
+              position: fixed;
+              top: 20px;
+              right: 20px;
+              padding: 10px 20px;
+              background-color: #34383a;
+              color: #fff;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              font-size: 16px;
+              transition: background-color 0.3s;
+          }
+  
+          #toggle-btn:hover {
+              background-color: #2c3e50;
+          }
+      </style>
+  </head>
+  <body>
+      <button id="toggle-btn">Dark Mode</button>
+  
+      <!-- Your website content goes here -->
+  
+      <script>
+          const body = document.body;
+          const toggleBtn = document.getElementById('toggle-btn');
+  
+          toggleBtn.addEventListener('click', () => {
+              body.classList.toggle('dark-mode');
+              updateButtonText();
+          });
+  
+          function updateButtonText() {
+              const isDarkMode = body.classList.contains('dark-mode');
+              toggleBtn.textContent = isDarkMode ? 'Light Off' : 'Lights On';
+          }
+      </script>
+  </body>
+  </html>
+
+    <!-- -------------------------------------- -->
 
 <body>
 
@@ -46,9 +111,9 @@
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+          <h1 class="name" title="Richard hanrick">Techmeng Aing</h1>
 
-          <p class="title">Web developer</p>
+          <p class="title">Grade 12 Student @ JFR</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -71,11 +136,10 @@
               <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
-            </div>
+            <div class="contact-info" style="overflow: hidden;">
+              <p class="contact-title">Contact Email</p>
+              <a href="mailto:aingtechmeng@gmail.com" class="contact-link" style="word-wrap: break-word; max-width: 100%; display: block;">aingtechmeng@gmail.com</a>
+            </div>            
 
           </li>
 
@@ -88,7 +152,7 @@
             <div class="contact-info">
               <p class="contact-title">Phone</p>
 
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+              <a href="tel:+12133522795" class="contact-link">+1 (226) 979-1984</a>
             </div>
 
           </li>
@@ -102,7 +166,7 @@
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
 
-              <time datetime="1982-06-23">June 23, 1982</time>
+              <time datetime="1982-06-23">February 6, 2006</time>
             </div>
 
           </li>
@@ -116,7 +180,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>Sacramento, California, USA</address>
+              <address>Guelph, Ontario, Canada</address>
             </div>
 
           </li>
@@ -128,22 +192,34 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://www.facebook.com/techmengg" class="social-link" target="_blank">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://twitter.com/salvzqq" class="social-link" target="_blank">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://www.instagram.com/techmengg/" class="social-link" target="_blank">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/techmeng-aing-3b539624a/" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/techmengg" class="social-link" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+        </li>                        
 
         </ul>
 
@@ -178,11 +254,11 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link>In Progress.</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
+            <button class="navbar-link" data-nav-link>In Progress.</button>
           </li>
 
           <li class="navbar-item">
@@ -209,17 +285,15 @@
 
         <section class="about-text">
           <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
+            I'm currently a student based in the Greater Guelph Metropolitan Area, on a journey to become a
+            software engineer/ developer. I have an interest in quants, robotics, ai, and programming.
           </p>
 
           <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
+            As I approach the next chapter in my educational and professional journey, my goal is to
+            contribute meaningfully to the ever-expanding field of computer science. I am excited about
+            the prospect of bringing my skills and passion for innovation to the forefront, making a 
+            positive impact in the world of software engineering.
           </p>
         </section>
 
@@ -242,10 +316,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
+                <h4 class="h4 service-item-title">School</h4>
 
                 <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
+                  Currently studying: 2 Maths, Physics, English, Computer Science, Business.
                 </p>
               </div>
 
@@ -258,10 +332,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
+                <h4 class="h4 service-item-title">Extracuriculums</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  Peer Tutoring, Ross Ambassador, Hack Club and Chess Club
                 </p>
               </div>
 
@@ -274,10 +348,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
+                <h4 class="h4 service-item-title">In Progress...</h4>
 
                 <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
+                  I'll work on this later.
                 </p>
               </div>
 
@@ -290,10 +364,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
+                <h4 class="h4 service-item-title">In Progress...</h4>
 
                 <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
+                  I'll work on this later.
                 </p>
               </div>
 
@@ -310,7 +384,7 @@
 
         <section class="testimonials">
 
-          <h3 class="h3 testimonials-title">Testimonials</h3>
+          <h3 class="h3 testimonials-title">In Progress...</h3>
 
           <ul class="testimonials-list has-scrollbar">
 
@@ -321,15 +395,11 @@
                   <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>eunchaeee?</h4>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                    Lazy to work on this... maybe later.
                   </p>
                 </div>
 
@@ -343,15 +413,11 @@
                   <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>chaewonnn?</h4>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                    sighhh...
                   </p>
                 </div>
 
@@ -365,15 +431,11 @@
                   <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>who?</h4>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                    Lazy to work on this... maybe later.
                   </p>
                 </div>
 
@@ -387,15 +449,11 @@
                   <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Who?</h4>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                    Lazy to work on this... maybe later.
                   </p>
                 </div>
 
@@ -431,17 +489,13 @@
 
             <div class="modal-content">
 
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+              <h4 class="h3 modal-title" data-modal-title>Who?</h4>
 
               <time datetime="2021-06-14">14 June, 2021</time>
 
               <div data-modal-text>
                 <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  Lazy to work on this... maybe later.
                 </p>
               </div>
 
@@ -458,7 +512,7 @@
 
         <section class="clients">
 
-          <h3 class="h3 clients-title">Clients</h3>
+          <h3 class="h3 clients-title">My Favourite Projects</h3>
 
           <ul class="clients-list has-scrollbar">
 
@@ -532,41 +586,27 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+              <h4 class="h4 timeline-item-title">John F. Ross Collegiate Vocational Institute</h4>
 
-              <span>2007 — 2008</span>
+              <span>2021 — 2024</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                Grade: 10-12 |
+                Activities and societies: Chess, Peer Tutoring, Hack Club, Ross Ambassador.
+                Successfully completed Grades 10-12 at JFR, following the Ontario Secondary School Curriculum.
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+              <h4 class="h4 timeline-item-title">International School of Siem Reap (ISSR)</h4>
 
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
+              <span>2013 — 2021</span>
 
               <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
+                Grade: Year 9 |
+                Completed Year 1-9 at ISSR, an institution accredited by Cambridge, following the British curriculum.
               </p>
 
             </li>
@@ -589,42 +629,36 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Creative director</h4>
+              <h4 class="h4 timeline-item-title">In Progress...</h4>
 
               <span>2015 — Present</span>
 
               <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
+                I'm just a highschooler T.T | I'll update it when in uni i guess.
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Art director</h4>
+              <h4 class="h4 timeline-item-title">In Progress...</h4>
 
               <span>2013 — 2015</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                I'm just a highschooler T.T | I'll update it when in uni i guess.
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Web designer</h4>
+              <h4 class="h4 timeline-item-title">In Progress...</h4>
 
               <span>2010 — 2013</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                I'm just a highschooler T.T | I'll update it when in uni i guess.
               </p>
 
             </li>
@@ -642,8 +676,8 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
+                <h5 class="h5">JavaScript</h5>
+                <data value="80">70%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -655,8 +689,8 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
+                <h5 class="h5">Python</h5>
+                <data value="70">60%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -668,8 +702,8 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
+                <h5 class="h5">HTML/CSS</h5>
+                <data value="90">80%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -681,8 +715,8 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
+                <h5 class="h5">C#</h5>
+                <data value="50">40%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -1146,7 +1180,7 @@
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d506801.6947616226!2d-80.41067429469866!3d43.5463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b8774f0c05b1d%3A0x417902f37a1f7ce!2sGreater%20Guelph%20Metropolitan%20Area%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
               width="400" height="300" loading="lazy"></iframe>
           </figure>
         </section>
